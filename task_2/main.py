@@ -22,7 +22,6 @@ def clone_repository(repo_url):
 
 
 def clean_directory(repo_dir, source_path):
-
     log("Cleaning directory..")
     temp_path = os.path.split(source_path)[0]
     finish_path = "".join((repo_dir, temp_path))

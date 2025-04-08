@@ -5,10 +5,8 @@ from typing import List
 
 def generate_versions(template: str) -> List[str]:
     versions = []
-    rnd_list_num = []
-    num1 = randint(0,9)
-    num2 = randint(0,9)
-    rnd_list_number = [str(num1), str(num2)]
+    rnd_list_num = [randint(0,9) for _ in range(2)]
+    rnd_list_number =list(map(str, rnd_list_num))
     for replacement in rnd_list_number:
         version = template.replace('*', replacement)
         versions.append(version)
